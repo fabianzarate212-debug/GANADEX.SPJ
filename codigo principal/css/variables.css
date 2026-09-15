@@ -1,0 +1,61 @@
+:root {
+
+    /* ===== IDENTIDAD GANADEX ===== */
+
+   /* ===== IDENTIDAD GANADEX ===== */
+
+--color-primary: #3F7D20;
+--color-primary-dark: #295617;
+--color-primary-light: #78B43D;
+
+--color-white: #FFFFFF;
+--color-background: #EEF6E8;
+--color-black: #1F2937;
+--color-gray: #56616F;
+--color-earth: #8B5A2B;
+
+--color-success: #2E7D32;
+--color-warning: #F59E0B;
+--color-danger: #C62828;
+
+    /* Tipografía */
+
+        /* Tipografía */
+
+    --font-primary: Arial, Helvetica, sans-serif;
+    --font-display: 'Fraunces', serif;
+
+    /* Tamaños */
+
+    --container-width: 1200px;
+
+    /* Espaciados */
+
+    --spacing-xs: 5px;
+    --spacing-sm: 10px;
+    --spacing-md: 20px;
+    --spacing-lg: 40px;
+    --spacing-xl: 80px;
+
+    /* Bordes */
+
+    --border-radius-sm: 6px;
+    --border-radius-md: 12px;
+    --border-radius-lg: 20px;
+    --border-radius-xl: 30px;
+
+    /* Sombras */
+
+    --shadow-sm: 0 2px 8px rgba(0,0,0,.08);
+    --shadow-md: 0 6px 18px rgba(0,0,0,.12);
+    --shadow-lg: 0 12px 30px rgba(0,0,0,.18);
+
+    /* Transiciones */
+
+    --transition: .3s ease;
+
+    /* Header */
+
+    --header-height: 145px;
+
+}

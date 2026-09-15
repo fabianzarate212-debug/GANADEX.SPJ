@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Explorar Bovinos | GANADEX S.P.J.</title>
+
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/catalog.css">
+    <link rel="stylesheet" href="css/explorar.css">
+    <link rel="stylesheet" href="css/footer.css">
+
+</head>
+
+<body>
+    <header class="header">
+
+        <div class="container">
+
+            <div class="header-top">
+
+                <div class="brand">
+
+                    <img src="assets/img/logos/logo-principal.png" alt="Logo GANADEX">
+
+                    <div class="brand-text">
+
+                        <h1>GANADEX S.P.J.</h1>
+
+                        <p>Compra y Venta de Ganado</p>
+
+                    </div>
+
+                </div>
+
+                <div class="user-actions">
+
+                    <a href="login.html" class="login">Iniciar Sesión</a>
+
+                    <a href="registro.html" class="register">Registrarse</a>
+
+                </div>
+
+            </div>
+
+            <div class="header-bottom">
+
+                <nav class="navbar">
+
+                    <ul>
+
+                        <!-- INICIO -->
+                        <li>
+                            <a href="index.html">
+
+                                <svg
+                                    class="nav-icon"
+                                    viewBox="0 0 24 24"
+                                    aria-hidden="true"
+                                >
+                                    <path
+                                        d="M3 11.5 12 4l9 7.5"
+                                    />
+
+                                    <path
+                                        d="M5.5 10.5V20h13v-9.5"
+                                    />
+
+                                    <path
+                                        d="M9.5 20v-5h5v5"
+                                    />
+                                </svg>
+
+                                <span>Inicio</span>
+
+                            </a>
+                        </li>
+
+
+                        <!-- EXPLORAR -->
+                        <li>
+                            <a href="explorar.html">
+
+                                <svg
+                                    class="nav-icon"
+                                    viewBox="0 0 24 24"
+                                    aria-hidden="true"
+                                >
+                                    <circle
+                                        cx="10.8"
+                                        cy="10.8"
+                                        r="6.8"
+                                    />
+
+                                    <path
+                                        d="m16 16 5 5"
+                                    />
+                                </svg>
+
+                                <span>Explorar Bovinos</span>
+
+                            </a>
+                        </li>
+
+
+                        <!-- CHAT -->
+                        <li>
+                            <a href="chat.html">
+
+                                <svg
+                                    class="nav-icon"
+                                    viewBox="0 0 24 24"
+                                    aria-hidden="true"
+                                >
+                                    <path
+                                        d="M4 5.5h16v11H8l-4 3v-14Z"
+                                    />
+
+                                    <path
+                                        d="M8 10h.01"
+                                    />
+
+                                    <path
+                                        d="M12 10h.01"
+                                    />
+
+                                    <path
+                                        d="M16 10h.01"
+                                    />
+                                </svg>
+
+                                <span>Chat</span>
+
+                            </a>
+                        </li>
+
+
+                        <!-- PERFIL -->
+                        <li>
+                            <a href="perfil.html">
+
+                                <svg
+                                    class="nav-icon"
+                                    viewBox="0 0 24 24"
+                                    aria-hidden="true"
+                                >
+                                    <circle
+                                        cx="12"
+                                        cy="8"
+                                        r="3.5"
+                                    />
+
+                                    <path
+                                        d="M5 20c.8-3.4 3.2-5.2 7-5.2s6.2 1.8 7 5.2"
+                                    />
+                                </svg>
+
+                                <span>Mi Perfil</span>
+
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </nav>
+
+                <a href="publicar.html" class="btn-publish">
+
+                    + Publicar Ganado
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <main>
+
+        <section class="explore">
+
+            <div class="container">
+
+                <div class="search-header">
+
+                    <h1>Explorar Bovinos</h1>
+
+                    <p>
+                        Encuentra ganado por raza, municipio y precio.
+                    </p>
+
+                    <div class="explore-search">
+
+                        <input
+                            type="text"
+                            id="search-input"
+                            placeholder="Buscar por nombre o raza...">
+
+                        <button>
+                            Buscar
+                        </button>
+
+                    </div>
+
+                    <p class="result-count">
+
+                        Mostrando
+                        <span id="resultados">6</span>
+                        bovinos
+
+                    </p>
+
+                </div>
+
+                <div class="explore-layout">
+
+                    <!-- FILTROS -->
+
+                    <aside class="filters">
+
+                        <h2>Filtros</h2>
+
+                        <div class="filter-group">
+
+                            <label>Raza</label>
+
+                            <select id="filter-raza">
+
+                                <option value="">Todas</option>
+                                <option>Brahman</option>
+                                <option>Angus</option>
+                                <option>Gyr</option>
+                                <option>Brangus</option>
+                                <option>Normando</option>
+                                <option>Simental</option>
+
+                            </select>
+
+                        </div>
+
+                        <div class="filter-group">
+
+                            <label>Municipio</label>
+
+                            <select id="filter-municipio">
+
+                                <option value="">Todos</option>
+                                <option>San Pedro de Jagua</option>
+                                <option>Ubalá</option>
+                                <option>Guasca</option>
+
+                            </select>
+
+                        </div>
+
+                        <div class="filter-group">
+
+                            <label>Precio máximo</label>
+
+                            <input
+                                type="number"
+                                id="filter-precio"
+                                placeholder="$ 8.000.000">
+
+                        </div>
+
+                        <button
+                            class="btn-filter"
+                            id="btn-filtrar">
+
+                            Aplicar filtros
+
+                        </button>
+
+                        <button
+                            class="btn-clear"
+                            id="btn-limpiar">
+
+                            Limpiar filtros
+
+                        </button>
+
+                    </aside>
+
+                    <!-- RESULTADOS -->
+
+                    <section class="results">
+
+                        <div class="featured-grid">
+
+                            <!-- BRAHMAN -->
+
+                            <article
+                                class="cow-card"
+                                data-raza="Brahman"
+                                data-municipio="San Pedro de Jagua"
+                                data-precio="6800000"
+                                data-nombre="Brahman">
+
+                                <div class="cow-image">
+
+                                    <span class="status available">
+                                        Disponible
+                                    </span>
+
+                                    <img
+                                        src="assets/img/bovinos/brahman.png"
+                                        alt="Brahman">
+
+                                </div>
+
+                                <div class="cow-info">
+
+                                    <span class="badge">
+                                        Brahman
+                                    </span>
+
+                                    <h3>$6.800.000</h3>
+
+                                    <p>San Pedro de Jagua</p>
+
+                                    <div class="cow-details">
+
+                                        <span>480 kg</span>
+
+                                        <span>24 meses</span>
+
+                                    </div>
+
+                                    <a href="detalle-bovino.html?id=BV-0001" class="btn-detalle">
+
+                                        Ver detalles
+
+                                    </a>
+
+                                </div>
+
+                            </article>
+
+                            <!-- ANGUS -->
+
+                            <article
+                                class="cow-card"
+                                data-raza="Angus"
+                                data-municipio="Ubalá"
+                                data-precio="7200000"
+                                data-nombre="Angus">
+
+                                <div class="cow-image">
+
+                                    <span class="status available">
+                                        Disponible
+                                    </span>
+
+                                    <img
+                                        src="assets/img/bovinos/angus.png"
+                                        alt="Angus">
+
+                                </div>
+
+                                <div class="cow-info">
+
+                                    <span class="badge">Angus</span>
+
+                                    <h3>$7.200.000</h3>
+
+                                    <p>Ubalá</p>
+
+                                    <div class="cow-details">
+
+                                        <span>450 kg</span>
+
+                                        <span>20 meses</span>
+
+                                    </div>
+
+                                    <a href="detalle-bovino.html?id=BV-0002" class="btn-detalle">
+
+                                        Ver detalles
+
+                                    </a>
+
+                                </div>
+
+                            </article>
+
+                            <!-- GYR -->
+
+                            <article
+                                class="cow-card"
+                                data-raza="Gyr"
+                                data-municipio="San Pedro de Jagua"
+                                data-precio="6500000"
+                                data-nombre="Gyr">
+
+                                <div class="cow-image">
+
+                                    <span class="status available">
+                                        Disponible
+                                    </span>
+
+                                    <img
+                                        src="assets/img/bovinos/gyr.png"
+                                        alt="Gyr">
+
+                                </div>
+
+                                <div class="cow-info">
+
+                                    <span class="badge">Gyr</span>
+
+                                    <h3>$6.500.000</h3>
+
+                                    <p>San Pedro de Jagua</p>
+
+                                    <div class="cow-details">
+
+                                        <span>470 kg</span>
+
+                                        <span>26 meses</span>
+
+                                    </div>
+
+                                    <a href="detalle-bovino.html?id=BV-0003" class="btn-detalle">
+
+                                        Ver detalles
+
+                                    </a>
+
+                                </div>
+
+                            </article>
+
+                            <!-- SIMENTAL -->
+
+                            <article
+                                class="cow-card"
+                                data-raza="Simental"
+                                data-municipio="Guasca"
+                                data-precio="7800000"
+                                data-nombre="Simental">
+
+                                <div class="cow-image">
+
+                                    <span class="status available">
+                                        Disponible
+                                    </span>
+
+                                    <img
+                                        src="assets/img/bovinos/simental.png"
+                                        alt="Simental">
+
+                                </div>
+
+                                <div class="cow-info">
+
+                                    <span class="badge">Simental</span>
+
+                                    <h3>$7.800.000</h3>
+
+                                    <p>Guasca</p>
+
+                                    <div class="cow-details">
+
+                                        <span>520 kg</span>
+
+                                        <span>30 meses</span>
+
+                                    </div>
+
+                                    <a href="detalle-bovino.html?id=BV-0004" class="btn-detalle">
+
+                                        Ver detalles
+
+                                    </a>
+
+                                </div>
+
+                            </article>
+
+                            <!-- NORMANDO -->
+
+                            <article
+                                class="cow-card"
+                                data-raza="Normando"
+                                data-municipio="Ubalá"
+                                data-precio="6300000"
+                                data-nombre="Normando">
+
+                                <div class="cow-image">
+
+                                    <span class="status available">
+                                        Disponible
+                                    </span>
+
+                                    <img
+                                        src="assets/img/bovinos/normando.png"
+                                        alt="Normando">
+
+                                </div>
+
+                                <div class="cow-info">
+
+                                    <span class="badge">Normando</span>
+
+                                    <h3>$6.300.000</h3>
+
+                                    <p>Ubalá</p>
+
+                                    <div class="cow-details">
+
+                                        <span>430 kg</span>
+
+                                        <span>22 meses</span>
+
+                                    </div>
+
+                                    <a href="detalle-bovino.html?id=BV-0005" class="btn-detalle">
+
+                                        Ver detalles
+
+                                    </a>
+
+                                </div>
+
+                            </article>
+
+                            <!-- BRANGUS -->
+
+                            <article
+                                class="cow-card"
+                                data-raza="Brangus"
+                                data-municipio="San Pedro de Jagua"
+                                data-precio="7000000"
+                                data-nombre="Brangus">
+
+                                <div class="cow-image">
+
+                                    <span class="status sold">
+                                        Vendido
+                                    </span>
+
+                                    <img
+                                        src="assets/img/bovinos/brangus.png"
+                                        alt="Brangus">
+
+                                </div>
+
+                                <div class="cow-info">
+
+                                    <span class="badge">Brangus</span>
+
+                                    <h3>$7.000.000</h3>
+
+                                    <p>San Pedro de Jagua</p>
+
+                                    <div class="cow-details">
+
+                                        <span>500 kg</span>
+
+                                        <span>25 meses</span>
+
+                                    </div>
+
+                                    <a href="detalle-bovino.html?id=BV-0006" class="btn-detalle">
+
+                                        Ver detalles
+
+                                    </a>
+
+                                </div>
+
+                            </article>
+
+                        </div>
+
+                    </section>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+    <footer class="footer">
+
+        <div class="container footer-content">
+
+            <div class="footer-brand">
+
+                <img src="assets/img/logos/logo-principal.png" alt="Logo GANADEX">
+
+                <p>
+                    Plataforma digital para la compra y venta de ganado bovino en San Pedro de Jagua y municipios cercanos.
+                </p>
+
+            </div>
+
+            <div class="footer-column">
+
+                <h3>Misión</h3>
+
+                <p>
+                    Facilitar la compra y venta de ganado bovino mediante una plataforma segura y confiable.
+                </p>
+
+            </div>
+
+            <div class="footer-column">
+
+                <h3>Visión</h3>
+
+                <p>
+                    Ser la plataforma líder en comercialización de ganado bovino en la región.
+                </p>
+
+            </div>
+
+            <div class="footer-column">
+
+                <h3>Contacto</h3>
+
+                <p>📧 ganadex.spj@gmail.com</p>
+                <p>📞 314 206 3201</p>
+                <p>📍 San Pedro de Jagua, Ubalá</p>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            <p>© 2026 GANADEX S.P.J. - Todos los derechos reservados.</p>
+
+        </div>
+
+    </footer>
+
+    <script src="js/explorar.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/header.js"></script>
+
+</body>
+
+</html>

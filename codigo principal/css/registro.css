@@ -1,0 +1,305 @@
+/* =========================
+   GANADEX S.P.J. — AUTENTICACIÓN
+   (Login / Registro / Perfil)
+========================= */
+
+.auth{
+    padding:90px 0 110px;
+    display:flex;
+    justify-content:center;
+    position:relative;
+    overflow:hidden;
+    background:
+        radial-gradient(circle at 12% 15%, rgba(63,125,32,.10) 0, transparent 40%),
+        radial-gradient(circle at 88% 85%, rgba(139,90,43,.10) 0, transparent 40%),
+        radial-gradient(rgba(63,125,32,.09) 1.5px, transparent 1.5px);
+    background-size:auto, auto, 24px 24px;
+}
+
+.auth-box{
+    position:relative;
+    z-index:2;
+    background:#FBF8F1;
+    border-radius:28px;
+    box-shadow:0 25px 60px rgba(31,55,18,.18);
+    border:1px solid rgba(63,125,32,.12);
+    padding:55px 50px;
+    width:100%;
+    max-width:480px;
+    margin:0 auto;
+    animation: auth-entrada .5s ease;
+}
+
+.auth-box::before{
+    content:"";
+    display:block;
+    height:6px;
+    width:70px;
+    border-radius:10px;
+    margin:0 auto 26px;
+    background:linear-gradient(90deg, var(--color-primary), var(--color-earth));
+}
+
+@keyframes auth-entrada{
+    from{
+        opacity:0;
+        transform:translateY(18px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.auth-icono{
+    width:64px;
+    height:64px;
+    border-radius:50%;
+    background:linear-gradient(155deg, var(--color-primary), var(--color-primary-dark));
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:1.7rem;
+    margin:0 auto 20px;
+    box-shadow:0 10px 24px rgba(63,125,32,.35);
+}
+
+.auth-box h1{
+    font-family:var(--font-display);
+    font-weight:600;
+    font-size:2.3rem;
+    text-align:center;
+    margin-bottom:8px;
+}
+
+.auth-box p.subtitulo{
+    color:var(--color-gray);
+    text-align:center;
+    margin-bottom:34px;
+}
+
+.auth-group{
+    margin-bottom:22px;
+}
+
+.auth-group label{
+    display:block;
+    margin-bottom:8px;
+    font-weight:700;
+    font-size:.8rem;
+    letter-spacing:.05em;
+    text-transform:uppercase;
+    color:var(--color-primary-dark);
+}
+
+.auth-group input,
+.auth-group select{
+    width:100%;
+    padding:16px 18px;
+    border:2px solid #E1DDCB;
+    border-radius:14px;
+    background:var(--color-white);
+    font-size:1.05rem;
+    transition:var(--transition);
+    box-shadow: inset 0 1px 3px rgba(0,0,0,.03);
+}
+
+.auth-group input:hover,
+.auth-group select:hover{
+    border-color:#CFE0BE;
+}
+
+.auth-group input:focus,
+.auth-group select:focus{
+    border-color:var(--color-primary);
+    box-shadow:0 0 0 5px rgba(63,125,32,.16);
+}
+
+.auth-group input:disabled{
+    background:#F1EEE3;
+    color:var(--color-black);
+    border-color:#E1DDCB;
+}
+
+.auth-mensaje{
+    display:none;
+    padding:14px 18px;
+    border-radius:12px;
+    margin-bottom:22px;
+    font-weight:600;
+    text-align:center;
+}
+
+.auth-mensaje.error{
+    display:block;
+    background:#FBE7E7;
+    color:var(--color-danger);
+}
+
+.auth-mensaje.exito{
+    display:block;
+    background:#E8F3DC;
+    color:var(--color-primary-dark);
+}
+
+.btn-auth{
+    width:100%;
+    padding:17px;
+    background:linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+    color:var(--color-white);
+    border-radius:14px;
+    font-weight:bold;
+    font-size:1.05rem;
+    letter-spacing:.02em;
+    cursor:pointer;
+    transition:var(--transition);
+    margin-top:8px;
+    box-shadow:0 12px 26px rgba(63,125,32,.28);
+}
+
+.btn-auth:hover{
+    transform:translateY(-3px);
+    box-shadow:0 16px 32px rgba(41,86,23,.35);
+}
+
+.btn-auth:active{
+    transform:translateY(-1px);
+}
+
+.auth-footer{
+    text-align:center;
+    margin-top:28px;
+    color:var(--color-gray);
+}
+
+.auth-footer a{
+    color:var(--color-primary);
+    font-weight:700;
+}
+
+.auth-footer a:hover{
+    color:var(--color-primary-dark);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:600px){
+
+    .auth{
+        padding:60px 0 80px;
+    }
+
+    .auth-box{
+        padding:38px 26px;
+    }
+
+    .auth-box h1{
+        font-size:1.9rem;
+    }
+
+}
+/* =========================
+   PERFIL
+========================= */
+
+.perfil-box{
+    max-width:600px;
+}
+
+.perfil-avatar{
+    width:90px;
+    height:90px;
+    margin:0 auto 20px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:linear-gradient(155deg, var(--color-primary), var(--color-primary-dark));
+    color:var(--color-white);
+    border-radius:50%;
+    font-size:2rem;
+    font-weight:700;
+    box-shadow:0 10px 24px rgba(63,125,32,.35);
+}
+
+.perfil-info{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+    margin-top:10px;
+}
+
+.perfil-item{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+    padding:16px 18px;
+    background:#F1EEE3;
+    border:1px solid #E1DDCB;
+    border-radius:14px;
+}
+
+.perfil-label{
+    color:var(--color-gray);
+    font-size:.85rem;
+    text-transform:uppercase;
+    letter-spacing:.04em;
+    font-weight:700;
+}
+
+.perfil-item strong{
+    color:var(--color-primary-dark);
+    text-align:right;
+    font-size:1.05rem;
+}
+
+.perfil-actions{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+    margin-top:30px;
+}
+
+.perfil-actions .btn-auth{
+    display:block;
+    text-align:center;
+    text-decoration:none;
+    margin-top:0;
+}
+
+.perfil-logout{
+    width:100%;
+    padding:16px;
+    background:transparent;
+    color:var(--color-danger);
+    border:2px solid var(--color-danger);
+    border-radius:14px;
+    font-weight:700;
+    cursor:pointer;
+    transition:var(--transition);
+}
+
+.perfil-logout:hover{
+    background:var(--color-danger);
+    color:var(--color-white);
+}
+
+/* =========================
+   RESPONSIVE — PERFIL
+========================= */
+
+@media(max-width:600px){
+
+    .perfil-item{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:6px;
+    }
+
+    .perfil-item strong{
+        text-align:left;
+    }
+
+}

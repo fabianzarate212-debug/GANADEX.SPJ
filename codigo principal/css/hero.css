@@ -1,0 +1,143 @@
+.hero{
+    background: linear-gradient(
+    90deg,
+    #6F8F53 0%,
+    #89A86A 45%,
+    #F8FBF4 100%
+);
+    border-radius:0 0 40px 40px;
+    padding:60px 0 90px;
+    margin-top:20px;
+    position:relative;
+    overflow:hidden;
+}
+
+.hero-container{
+    display:grid;
+    grid-template-columns:55% 45%;
+    align-items:center;
+    gap:60px;
+    min-height:75vh;
+}
+
+.hero-content h2 {
+    color: var(--color-primary-dark);
+}
+
+.hero-content p {
+    color: #ffffff;
+}
+
+.hero-content p{
+    font-size:1.2rem;
+    max-width:560px;
+    margin-bottom:30px;
+    
+}
+
+.search-box{
+    display:flex;
+    background:var(--color-white);
+    border-radius:60px;
+    overflow:hidden;
+    box-shadow:var(--shadow-md);
+    margin-bottom:25px;
+}
+
+.search-box input{
+    flex:1;
+    padding:20px 25px;
+    font-size:1rem;
+}
+
+.search-box button{
+    background:var(--color-primary);
+    color:var(--color-white);
+    padding:0 35px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.quick-filters{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+    margin-bottom:35px;
+}
+
+.quick-filters a{
+    background:var(--color-white);
+    padding:12px 20px;
+    border-radius:50px;
+    box-shadow:var(--shadow-sm);
+    font-weight:600;
+    color:var(--color-primary-dark);
+    transition:var(--transition);
+}
+
+.quick-filters a:hover{
+    background:var(--color-primary);
+    color:var(--color-white);
+    transform:translateY(-2px);
+}
+.hero-buttons{
+    display:flex;
+    gap:18px;
+}
+
+.hero-primary,
+.hero-secondary{
+    padding:16px 30px;
+    border-radius:var(--border-radius-md);
+    font-weight:bold;
+}
+
+.hero-primary{
+    background:var(--color-primary);
+    color:var(--color-white);
+}
+
+.hero-secondary{
+    border:2px solid var(--color-primary);
+    color:var(--color-primary-dark);
+}
+
+.hero-image{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.hero-image img{
+    width:100%;
+    max-width:520px;
+    border-radius:20px;
+    object-fit:cover;
+}
+
+@media(max-width:900px){
+
+.hero-container{
+grid-template-columns:1fr;
+text-align:center;
+}
+
+.hero-content h2{
+font-size:2.4rem;
+}
+
+.search-box{
+flex-direction:column;
+border-radius:20px;
+}
+
+.search-box button{
+padding:18px;
+}
+
+.hero-buttons,
+.quick-filters{
+justify-content:center;
+}
+
+}

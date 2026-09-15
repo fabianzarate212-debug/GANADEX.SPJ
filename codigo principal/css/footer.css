@@ -1,0 +1,205 @@
+/* =========================================================
+   GANADEX S.P.J. — FOOTER
+========================================================= */
+
+.footer {
+    width: 100%;
+    background: #1f4d16;
+    color: #ffffff;
+    margin: 0;
+}
+
+
+/* =========================================================
+   CONTENIDO PRINCIPAL
+========================================================= */
+
+.footer-content {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    padding: 50px 30px 40px;
+
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+    gap: 50px;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   MARCA
+========================================================= */
+
+.footer-brand {
+    min-width: 0;
+}
+
+.footer-brand img {
+    width: 80px;
+    height: 80px;
+
+    object-fit: contain;
+
+    background: #ffffff;
+    padding: 6px;
+
+    border-radius: 6px;
+
+    display: block;
+    margin-bottom: 20px;
+}
+
+.footer-brand p {
+    margin: 0;
+
+    max-width: 380px;
+
+    color: rgba(255, 255, 255, 0.88);
+
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   COLUMNAS
+========================================================= */
+
+.footer-column {
+    min-width: 0;
+}
+
+.footer-column h3 {
+    margin: 0 0 18px;
+
+    color: #ffffff;
+
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.footer-column p {
+    margin: 0 0 10px;
+
+    color: rgba(255, 255, 255, 0.88);
+
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   CONTACTO
+========================================================= */
+
+.footer-column:last-child p {
+    display: flex;
+    align-items: flex-start;
+    gap: 7px;
+}
+
+
+/* =========================================================
+   PARTE INFERIOR
+========================================================= */
+
+.footer-bottom {
+    width: 100%;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+
+    padding: 20px 30px;
+
+    box-sizing: border-box;
+
+    text-align: center;
+}
+
+.footer-bottom p {
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.85);
+
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 40px;
+
+        padding: 45px 25px 35px;
+    }
+
+}
+
+
+/* =========================================================
+   CELULAR
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .footer-content {
+        grid-template-columns: 1fr;
+
+        gap: 32px;
+
+        padding: 40px 20px 30px;
+    }
+
+
+    .footer-brand,
+    .footer-column {
+        text-align: center;
+    }
+
+
+    .footer-brand img {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    .footer-brand p {
+        max-width: 100%;
+    }
+
+
+    .footer-column h3 {
+        font-size: 18px;
+        margin-bottom: 12px;
+    }
+
+
+    .footer-column p {
+        font-size: 14px;
+    }
+
+
+    .footer-column:last-child p {
+        justify-content: center;
+    }
+
+
+    .footer-bottom {
+        padding: 18px 20px;
+    }
+
+
+    .footer-bottom p {
+        font-size: 13px;
+    }
+
+}

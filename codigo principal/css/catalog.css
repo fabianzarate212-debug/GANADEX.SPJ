@@ -1,0 +1,199 @@
+.featured{
+    padding: 60px 0 90px;
+    background:#F7FAF4;
+}
+
+.section-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    margin-bottom:40px;
+}
+
+.section-header h2{
+    font-size:2.5rem;
+    margin-bottom:8px;
+}
+
+.section-header p{
+    color:var(--color-gray);
+}
+
+.view-all{
+    color:var(--color-primary);
+    font-weight:700;
+}
+
+.view-all:hover{
+    color:var(--color-primary-dark);
+}
+
+.featured-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:40px;
+}
+
+/* =========================
+   TARJETA
+========================= */
+
+.cow-card{
+    background:var(--color-white);
+    border-radius:22px;
+    overflow:hidden;
+    box-shadow:var(--shadow-sm);
+    border:1px solid rgba(63,125,32,.12);
+    transition:var(--transition);
+}
+
+.cow-card:hover{
+    transform:translateY(-8px);
+    box-shadow:var(--shadow-lg);
+}
+
+/* =========================
+   IMAGEN PNG
+========================= */
+
+.cow-image{
+    position:relative;
+    height:250px;
+    background:linear-gradient(
+        180deg,
+        #F6FAF2 0%,
+        #E7F3DA 100%
+    );
+    display:flex;
+    justify-content:center;
+    align-items:flex-end;
+    padding:15px;
+}
+
+.cow-image img{
+    width:100%;
+    max-height:220px;
+    object-fit:contain;
+    transition:.4s ease;
+    filter:drop-shadow(0 12px 20px rgba(0,0,0,.18));
+}
+
+.cow-card:hover .cow-image img{
+    transform:translateY(-8px) scale(1.05);
+}
+
+/* =========================
+   ESTADO
+========================= */
+
+.status{
+    position:absolute;
+    top:15px;
+    left:15px;
+    padding:7px 14px;
+    border-radius:50px;
+    font-size:.8rem;
+    font-weight:bold;
+    color:white;
+    z-index:2;
+}
+
+.available{
+    background:#2E7D32;
+}
+
+.sold{
+    background:var(--color-danger);
+}
+
+/* =========================
+   INFORMACIÓN
+========================= */
+
+.cow-info{
+    padding:24px;
+}
+
+.badge{
+    display:inline-block;
+    background:#E8F3DC;
+    color:var(--color-primary-dark);
+    padding:8px 14px;
+    border-radius:50px;
+    font-size:.9rem;
+    font-weight:bold;
+    margin-bottom:15px;
+}
+
+.cow-info h3{
+    color:var(--color-primary-dark);
+    font-size:1.8rem;
+    margin:10px 0;
+}
+
+.cow-info p{
+    color:var(--color-gray);
+}
+
+/* =========================
+   DETALLES
+========================= */
+
+.cow-details{
+    display:flex;
+    justify-content:space-between;
+    margin:22px 0;
+    color:var(--color-gray);
+    font-weight:500;
+}
+
+/* =========================
+   BOTÓN
+========================= */
+
+.cow-info button,
+.cow-info .btn-detalle{
+    display:block;
+    width:100%;
+    padding:15px;
+    background:var(--color-primary);
+    color:var(--color-white);
+    border-radius:12px;
+    font-weight:bold;
+    text-align:center;
+    text-decoration:none;
+    cursor:pointer;
+    transition:var(--transition);
+}
+
+.cow-info button:hover,
+.cow-info .btn-detalle:hover{
+    background:var(--color-primary-dark);
+    transform:translateY(-2px);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:768px){
+
+    .section-header{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:15px;
+    }
+
+    .featured-grid{
+        grid-template-columns:1fr;
+    }
+
+    .cow-image{
+        height:220px;
+    }
+
+    .cow-image img{
+        max-height:190px;
+    }
+
+}

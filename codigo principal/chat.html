@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Chat | GANADEX S.P.J.</title>
+
+    <meta
+        name="description"
+        content="Chat de GANADEX S.P.J. para compradores y vendedores de ganado bovino."
+    >
+
+    <!-- CSS GENERAL -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- HEADER -->
+    <link rel="stylesheet" href="css/header.css">
+
+    <!-- CHAT -->
+    <link rel="stylesheet" href="css/chat.css">
+
+    <!-- FOOTER -->
+    <link rel="stylesheet" href="css/footer.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header class="header">
+
+        <div class="container">
+
+
+            <!-- PARTE SUPERIOR -->
+
+            <div class="header-top">
+
+
+                <!-- LOGO -->
+
+                <a href="index.html" class="brand">
+
+                    <img
+                        src="assets/img/logos/logo-principal.png"
+                        alt="Logo GANADEX S.P.J."
+                    >
+
+                    <div class="brand-text">
+
+                        <h1>GANADEX S.P.J.</h1>
+
+                        <p>
+                            Compra y Venta de Ganado
+                        </p>
+
+                    </div>
+
+                </a>
+
+
+                <!-- USUARIO -->
+
+                <div class="user-actions">
+
+                    <!-- header.js modifica esta parte -->
+
+                    <a
+                        href="login.html"
+                        class="login"
+                    >
+                        Iniciar Sesión
+                    </a>
+
+                    <a
+                        href="registro.html"
+                        class="register"
+                    >
+                        Registrarse
+                    </a>
+
+                </div>
+
+
+            </div>
+
+
+            <!-- PARTE INFERIOR -->
+
+            <div class="header-bottom">
+
+
+                <!-- NAVEGACIÓN -->
+
+                <nav class="navbar">
+
+                    <ul>
+
+
+                        <!-- INICIO -->
+
+                        <li>
+
+                            <a href="index.html">
+
+                                <svg
+                                    class="nav-icon"
+                                    viewBox="0 0 24 24"
+                                    aria-hidden="true"
+                                >
+
+                                    <path
+                                        d="M3 11.5 12 4l9 7.5"
+                                    />
+
+                                    <path
+                                        d="M5.5 10.5V20h13v-9.5"
+                                    />
+
+                                    <path
+                                        d="M9.5 20v-5h5v5"
+                                    />
+
+                                </svg>
+
+                                <span>
+                                    Inicio
+                                </span>
+
+                            </a>
+
+                        </li>
+
+
+                        <!-- EXPLORAR -->
+
+                        <li>
+
+                            <a href="explorar.html">
+
+                                <svg
+                                    class="nav-icon"
+                                    viewBox="0 0 24 24"
+                                    aria-hidden="true"
+                                >
+
+                                    <circle
+                                        cx="10.8"
+                                        cy="10.8"
+                                        r="6.8"
+                                    />
+
+                                    <path
+                                        d="m16 16 5 5"
+                                    />
+
+                                </svg>
+
+                                <span>
+                                    Explorar Bovinos
+                                </span>
+
+                            </a>
+
+                        </li>
+
+
+                        <!-- CHAT -->
+
+                        <li>
+
+                            <a
+                                href="chat.html"
+                                class="active"
+                            >
+
+                                <svg
+                                    class="nav-icon"
+                                    viewBox="0 0 24 24"
+                                    aria-hidden="true"
+                                >
+
+                                    <path
+                                        d="M4 5.5h16v11H8l-4 3v-14Z"
+                                    />
+
+                                    <path
+                                        d="M8 10h.01"
+                                    />
+
+                                    <path
+                                        d="M12 10h.01"
+                                    />
+
+                                    <path
+                                        d="M16 10h.01"
+                                    />
+
+                                </svg>
+
+                                <span>
+                                    Chat
+                                </span>
+
+                            </a>
+
+                        </li>
+
+
+                        <!-- PERFIL -->
+
+                        <li>
+
+                            <a href="perfil.html">
+
+                                <svg
+                                    class="nav-icon"
+                                    viewBox="0 0 24 24"
+                                    aria-hidden="true"
+                                >
+
+                                    <circle
+                                        cx="12"
+                                        cy="8"
+                                        r="3.5"
+                                    />
+
+                                    <path
+                                        d="M5 20c.8-3.4 3.2-5.2 7-5.2s6.2 1.8 7 5.2"
+                                    />
+
+                                </svg>
+
+                                <span>
+                                    Mi Perfil
+                                </span>
+
+                            </a>
+
+                        </li>
+
+
+                    </ul>
+
+                </nav>
+
+
+                <!-- PUBLICAR -->
+
+                <a
+                    href="publicar.html"
+                    class="btn-publish"
+                >
+
+                    <span class="publish-plus">
+                        +
+                    </span>
+
+                    Publicar Ganado
+
+                </a>
+
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         CONTENIDO PRINCIPAL
+    ====================================================== -->
+
+    <main class="chat-page">
+
+
+        <div class="container">
+
+
+            <!-- ENCABEZADO -->
+
+            <div class="chat-heading">
+
+                <h2>
+                    Mensajes
+                </h2>
+
+                <p>
+                    Comunícate directamente con compradores y vendedores.
+                </p>
+
+            </div>
+
+
+            <!-- =================================================
+                 CONTENEDOR DEL CHAT
+            ================================================== -->
+
+            <section class="chat-container">
+
+
+                <!-- =================================================
+                     LISTA DE CONVERSACIONES
+                ================================================== -->
+
+                <aside class="conversation-sidebar">
+
+
+                    <div class="conversation-header">
+
+                        <h3>
+                            Conversaciones
+                        </h3>
+
+                    </div>
+
+
+                    <!-- BUSCADOR -->
+
+                    <div class="conversation-search">
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            aria-hidden="true"
+                        >
+
+                            <circle
+                                cx="10.8"
+                                cy="10.8"
+                                r="6.8"
+                            />
+
+                            <path
+                                d="m16 16 5 5"
+                            />
+
+                        </svg>
+
+
+                        <input
+                            type="text"
+                            id="search-conversations"
+                            placeholder="Buscar conversación..."
+                        >
+
+                    </div>
+
+
+                    <!-- CONVERSACIONES -->
+
+                    <div
+                        class="conversation-list"
+                        id="conversation-list"
+                    >
+
+                        <!-- JS genera las conversaciones -->
+
+                    </div>
+
+
+                </aside>
+
+
+
+                <!-- =================================================
+                     ÁREA PRINCIPAL DEL CHAT
+                ================================================== -->
+
+                <section class="chat-main">
+
+
+                    <!-- ESTADO INICIAL -->
+
+                    <div
+                        class="chat-empty"
+                        id="chat-empty"
+                    >
+
+                        <div class="empty-chat-icon">
+
+                            <svg
+                                viewBox="0 0 24 24"
+                                aria-hidden="true"
+                            >
+
+                                <path
+                                    d="M4 5.5h16v11H8l-4 3v-14Z"
+                                />
+
+                                <path
+                                    d="M8 10h.01"
+                                />
+
+                                <path
+                                    d="M12 10h.01"
+                                />
+
+                                <path
+                                    d="M16 10h.01"
+                                />
+
+                            </svg>
+
+                        </div>
+
+                        <h3>
+                            Selecciona una conversación
+                        </h3>
+
+                        <p>
+                            Elige una conversación para comenzar a hablar.
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- CHAT ACTIVO -->
+
+                    <div
+                        class="active-chat"
+                        id="active-chat"
+                    >
+
+
+                        <!-- CABECERA DEL CHAT -->
+
+                        <header class="chat-header">
+
+
+                            <div class="chat-user">
+
+                                <div
+                                    class="chat-avatar"
+                                    id="chat-avatar"
+                                >
+                                    J
+                                </div>
+
+
+                                <div>
+
+                                    <h3 id="chat-user-name">
+                                        Juan Rodríguez
+                                    </h3>
+
+                                    <span id="chat-user-status">
+                                        En línea
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- INFORMACIÓN DEL BOVINO -->
+
+                            <div
+                                class="chat-cattle"
+                                id="chat-cattle"
+                            >
+
+                                <div>
+
+                                    <strong id="chat-cattle-breed">
+                                        Brahman
+                                    </strong>
+
+                                    <span id="chat-cattle-price">
+                                        $6.800.000
+                                    </span>
+
+                                </div>
+
+                                <a
+                                    href="detalle-bovino.html?id=BV-0001"
+                                    id="chat-cattle-link"
+                                >
+                                    Ver bovino
+                                </a>
+
+                            </div>
+
+
+                        </header>
+
+
+
+                        <!-- MENSAJES -->
+
+                        <div
+                            class="messages"
+                            id="messages"
+                        >
+
+                            <!-- JS genera los mensajes -->
+
+                        </div>
+
+
+
+                        <!-- ESCRIBIR -->
+
+                        <form
+                            class="message-form"
+                            id="message-form"
+                        >
+
+
+                            <input
+                                type="text"
+                                id="message-input"
+                                placeholder="Escribe un mensaje..."
+                                autocomplete="off"
+                            >
+
+
+                            <button
+                                type="submit"
+                                aria-label="Enviar mensaje"
+                            >
+
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    aria-hidden="true"
+                                >
+
+                                    <path
+                                        d="M3 11.5 21 3l-6.5 18-3.5-7-8-2.5Z"
+                                    />
+
+                                    <path
+                                        d="m11 14 4-4"
+                                    />
+
+                                </svg>
+
+                            </button>
+
+
+                        </form>
+
+
+                    </div>
+
+                </section>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer>
+
+        <div class="container">
+
+            <p>
+                © 2026 GANADEX S.P.J. — Compra y Venta de Ganado
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script src="js/auth.js"></script>
+
+    <script src="js/header.js"></script>
+
+    <script src="js/chat.js"></script>
+
+
+</body>
+
+</html>
